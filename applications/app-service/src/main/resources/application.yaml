@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "user-logs"
+  devtools:
+    add-properties: false
+  kafka:
+    consumer:
+      topic: "put-logs"
+    boostrap-servers: "${KAFKA_BOOSTRAP_SERVERS}"
+  profiles:
+    include: null
+  data:
+    mongodb:
+      uri: "mongodb://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@${MONGODB_HOST}:27017/admin"
